@@ -1,0 +1,263 @@
+/* =============================================
+   Variáveis de Cor - Tema Clássico Moderno
+   ============================================= */
+:root {
+    --black: #1A120B;
+    --dark-brown: #3C2A21;
+    --medium-brown: #6B4F3F;
+    --light-brown: #9D7C5E;
+    --beige: #E5D5C6;
+    --cream: #F5EFE6;
+    --white: #FFFFFF;
+    --accent: #8B5A2B;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --border-radius: 6px;
+    --border-width: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+    background-color: var(--cream);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: var(--space-sm);
+}
+
+a {
+    text-decoration: none;
+    color: var(--medium-brown);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--black);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+header {
+    background-color: var(--white) !important;
+    border-bottom: var(--border-width) solid var(--beige);
+}
+
+.navbar {
+    padding: var(--space-sm) 0;
+}
+
+.nav-link {
+    color: var(--dark-brown);
+    font-weight: 500;
+    padding: var(--space-xs) var(--space-sm);
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--black);
+}
+
+.nav-link.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+#produtos {
+    padding: var(--space-xl) 0;
+    text-align: center;
+    background-color: var(--white);
+    margin: var(--space-lg) 0;
+    border-top: var(--border-width) solid var(--beige);
+    border-bottom: var(--border-width) solid var(--beige);
+}
+
+#produtos h2 {
+    font-size: 2.2rem;
+    margin-bottom: var(--space-md);
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+#produtos h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+#produtos h3 {
+    font-size: 1.6rem;
+    margin-bottom: var(--space-lg);
+    color: var(--medium-brown);
+    font-weight: 500;
+}
+
+.product-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    border: var(--border-width) solid var(--beige);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--accent);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--light-brown);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: var(--cream);
+    padding: var(--space-lg);
+    border-bottom: var(--border-width) solid var(--beige);
+}
+
+.card-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-xs);
+    color: var(--dark-brown);
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    color: var(--medium-brown);
+    margin-bottom: var(--space-md);
+    font-weight: 500;
+}
+
+.btn-outline-primary {
+    border: var(--border-width) solid var(--medium-brown);
+    color: var(--medium-brown);
+    padding: 0.6rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--medium-brown);
+    color: var(--white);
+    border-color: var(--medium-brown);
+}
+
+#cadastro .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#cadastro .card {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: var(--border-width) solid var(--beige);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        max-width: 90%;
+    }
+
+    #cadastro .card {
+        max-width: 90%;
+    }
+}

@@ -3,88 +3,361 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MiniMercado Bom Preço</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MiniMercado Bom Preço - Sua economia diária começa aqui!">
+    <meta property="og:title" content="MiniMercado Bom Preço - Economia no seu dia a dia">
+    <meta property="og:description" content="Sua economia diária começa aqui!">
+    <meta property="og:image" content="img/logo-social.png">
+    <title>MiniMercado Bom Preço - Economia no seu dia a dia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- CSS personalizado -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Cabeçalho -->
-    <header>
-        <h1>MiniMercado Bom Preço</h1>
-        <p>Sua economia diária começa aqui!</p>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="bg-light border-bottom">
+        <div class="container">
+            <div class="text-center py-4">
+                <h1 class="display-5 mb-1">MiniMercado Bom Preço</h1>
+                <p class="lead mb-0">Sua economia diária começa aqui!</p>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid px-0">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav w-100 justify-content-around">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#inicio">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#produtos">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#servicos">Serviços</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#cadastro">Cadastro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contato">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <!-- Corpo -->
-    <main>
-        <section id="inicio">
-            <h2>Bem-vindo ao MiniMercado Bom Preço!</h2>
-            <p>Oferecemos produtos variados e serviços práticos para facilitar o seu dia a dia.</p>
-        </section>
+    <!-- Conteúdo Principal -->
+    <main class="py-4">
+        <div class="container">
+            <!-- Seção Início -->
+            <section id="inicio" class="mb-5">
+                <div class="text-center mb-4">
+                    <h2 class="display-6">Bem-vindo ao MiniMercado Bom Preço!</h2>
+                    <p class="lead">Oferecemos produtos variados e serviços práticos para facilitar o seu dia a dia.</p>
+                </div>
 
-        <section id="produtos">
-            <h2>Produtos</h2>
-            <p>Nossos produtos estão organizados em três categorias principais: Frutas e Verduras, Alimentos Não
-                Perecíveis e Produtos de Higiene e Limpeza. Abaixo, você poderá visualizar alguns itens selecionados de
-                cada uma dessas categorias, com imagens, descrições e preços atualizados.</p>
+                <!-- Carrossel -->
+                <div id="carousel" class="mb-5">
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="img/arroz.png" class="d-block w-100" alt="Promoção de Arroz" width="800"
+                                    height="400">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Arroz Especial</h5>
+                                    <p>Promoção por tempo limitado</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/banana.png" class="d-block w-100" alt="Oferta de Bananas" width="800"
+                                    height="400">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Bananas Frescas</h5>
+                                    <p>Apenas R$ 3,00/kg</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/sabonete.png" class="d-block w-100" alt="Sabonete em promoção" width="800"
+                                    height="400">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Higiene Pessoal</h5>
+                                    <p>Sabonetes com 20% de desconto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-            <h3>Frutas e Verduras</h3>
-            <div>
-                <img src="img\banana.png" alt="Banana" width="150">
-                <p>Banana - R$ 3,00/kg</p>
-            </div>
-            <div>
-                <img src="img\tomate.png" alt="Tomate" width="150">
-                <p>Tomate - R$ 5,00/kg</p>
-            </div>
+            <!-- Seção Produtos -->
+            <section id="produtos" class="mb-5">
+                <h2 class="text-center mb-4">Nossos Produtos</h2>
+                <p class="text-center mb-5">Nossos produtos estão organizados em três categorias principais: Frutas e
+                    Verduras, Alimentos Não Perecíveis e Produtos de Higiene e Limpeza.</p>
 
-            <h3>Alimentos Não Perecíveis</h3>
-            <div>
-                <img src="img\arroz.png" alt="Arroz" width="150">
-                <p>Arroz 5kg - R$ 22,00</p>
-            </div>
-            <div>
-                <img src="img\feijao.png" alt="Feijão" width="150">
-                <p>Feijão 1kg - R$ 8,00</p>
-            </div>
+                <!-- Frutas e Verduras -->
+                <div class="mb-5">
+                    <h3 class="border-bottom pb-2 mb-4">Frutas e Verduras</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100" data-product-id="1">
+                                <img src="img/banana.png" class="card-img-top p-3" alt="Banana" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Banana</h5>
+                                    <p class="card-text">R$ 3,00/kg</p>
+                                    <button class="btn btn-outline-primary mt-auto">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100" data-product-id="2">
+                                <img src="img/tomate.png" class="card-img-top p-3" alt="Tomate" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Tomate</h5>
+                                    <p class="card-text">R$ 5,00/kg</p>
+                                    <button class="btn btn-outline-primary mt-auto">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Adicione mais produtos aqui -->
+                    </div>
+                </div>
 
-            <h3>Higiene e Limpeza</h3>
-            <div>
-                <img src="img\sabonete.png" alt="Sabonete" width="150">
-                <p>Sabonete - R$ 2,50</p>
-            </div>
-            <div>
-                <img src="img\detergente.png" alt="Detergente" width="150">
-                <p>Detergente - R$ 3,00</p>
-            </div>
-        </section>
+                <!-- Alimentos Não Perecíveis -->
+                <div class="mb-5">
+                    <h3 class="border-bottom pb-2 mb-4">Alimentos Não Perecíveis</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100" data-product-id="3">
+                                <img src="img/arroz.png" class="card-img-top p-3" alt="Arroz" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Arroz 5kg</h5>
+                                    <p class="card-text">R$ 22,00</p>
+                                    <button class="btn btn-outline-primary mt-auto">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100" data-product-id="4">
+                                <img src="img/feijao.png" class="card-img-top p-3" alt="Feijão" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Feijão 1kg</h5>
+                                    <p class="card-text">R$ 8,00</p>
+                                    <button class="btn btn-outline-primary mt-auto">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Adicione mais produtos aqui -->
+                    </div>
+                </div>
 
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <div>
-                <h3>Retirada no Local</h3>
-                <p>Você pode fazer seu pedido online e retirar pessoalmente na loja. Gratuito.</p>
-            </div>
-            <div>
-                <h3>Tele-entrega</h3>
-                <p>Receba suas compras em casa com nossa entrega rápida. Taxa: R$ 5,00.</p>
-            </div>
-        </section>
+                <!-- Higiene e Limpeza -->
+                <div class="mb-5">
+                    <h3 class="border-bottom pb-2 mb-4">Higiene e Limpeza</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100" data-product-id="5">
+                                <img src="img/sabonete.png" class="card-img-top p-3" alt="Sabonete" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Sabonete</h5>
+                                    <p class="card-text">R$ 2,50</p>
+                                    <button class="btn btn-outline-primary mt-auto">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100" data-product-id="6">
+                                <img src="img/detergente.png" class="card-img-top p-3" alt="Detergente" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Detergente</h5>
+                                    <p class="card-text">R$ 3,00</p>
+                                    <button class="btn btn-outline-primary mt-auto">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Adicione mais produtos aqui -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Serviços -->
+            <section id="servicos" class="mb-5">
+                <h2 class="text-center mb-4">Nossos Serviços</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 border rounded h-100">
+                            <h3 class="h4">Retirada no Local</h3>
+                            <p class="mb-0">Você pode fazer seu pedido online e retirar pessoalmente na loja.
+                                <strong>Gratuito.</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-4 border rounded h-100">
+                            <h3 class="h4">Tele-entrega</h3>
+                            <p class="mb-0">Receba suas compras em casa com nossa entrega rápida. <strong>Taxa: R$
+                                    5,00.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Cadastro -->
+            <section id="cadastro" class="mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h2 class="text-center mb-4">Cadastro do Cliente</h2>
+                                <form id="formCadastro" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="nome" class="form-label">Nome completo</label>
+                                            <input type="text" id="nome" class="form-control" required minlength="3">
+                                            <div class="invalid-feedback">Por favor, insira seu nome completo</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">E-mail</label>
+                                            <input type="email" id="email" class="form-control" required>
+                                            <div class="invalid-feedback">Por favor, insira um e-mail válido</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="telefone" class="form-label">Telefone</label>
+                                            <input type="tel" id="telefone" class="form-control" required
+                                                placeholder="(00) 00000-0000"
+                                                pattern="\(?\d{2}\)?[\s-]?\d{4,5}[\s-]?\d{4}">
+                                            <div class="invalid-feedback">Por favor, insira um telefone válido</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="data" class="form-label">Data para retirada/entrega</label>
+                                            <input type="date" id="data" class="form-control" required>
+                                            <div class="invalid-feedback">Por favor, selecione uma data</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="hora" class="form-label">Horário preferencial</label>
+                                            <input type="time" id="hora" class="form-control" required>
+                                            <div class="invalid-feedback">Por favor, selecione um horário</div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <fieldset class="mb-3">
+                                                <legend class="form-label">Forma de recebimento</legend>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="entrega"
+                                                        id="local" value="local" required>
+                                                    <label class="form-check-label" for="local">Retirada no
+                                                        Local</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="entrega"
+                                                        id="entrega" value="entrega">
+                                                    <label class="form-check-label" for="entrega">Tele-entrega (taxa de
+                                                        R$ 5,00)</label>
+                                                </div>
+                                                <div class="invalid-feedback">Por favor, selecione uma opção</div>
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-12" id="dadosEntrega">
+                                            <div class="border p-3 rounded mb-3">
+                                                <h4 class="h5 mb-3">Dados para Entrega</h4>
+                                                <div class="row g-3">
+                                                    <div class="col-md-8">
+                                                        <label for="endereco" class="form-label">Endereço</label>
+                                                        <input type="text" id="endereco" class="form-control"
+                                                            placeholder="Rua, número, complemento">
+                                                        <div class="invalid-feedback">Por favor, insira seu endereço
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="bairro" class="form-label">Bairro</label>
+                                                        <input type="text" id="bairro" class="form-control">
+                                                        <div class="invalid-feedback">Por favor, insira seu bairro</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="cidade" class="form-label">Cidade</label>
+                                                        <input type="text" id="cidade" class="form-control">
+                                                        <div class="invalid-feedback">Por favor, insira sua cidade</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="cep" class="form-label">CEP</label>
+                                                        <input type="text" id="cep" class="form-control"
+                                                            placeholder="00000-000" pattern="\d{5}-?\d{3}">
+                                                        <div class="invalid-feedback">Por favor, insira um CEP válido
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-primary px-4">Enviar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <!-- Rodapé -->
-    <footer id="contato">
-        <p>© 2025 MiniMercado Bom Preço</p>
-        <p>Desenvolvido por Eduarda Silva Santos</p>
-        <p>Contato: contato@bompreco.com</p>
-        <p><a href="#inicio">Voltar ao topo</a></p>
+    <footer class="bg-light border-top py-4" id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="mb-3">MiniMercado Bom Preço</h5>
+                    <p>Sua economia diária começa aqui!</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5 class="mb-3">Contato</h5>
+                    <p class="mb-1">contato@bompreco.com</p>
+                    <p>(00) 0000-0000</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <h5 class="mb-3">Links Rápidos</h5>
+                    <a href="#inicio" class="d-block mb-1">Início</a>
+                    <a href="#produtos" class="d-block mb-1">Produtos</a>
+                    <a href="#servicos" class="d-block">Serviços</a>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 MiniMercado Bom Preço - Desenvolvido por Eduarda Silva Santos</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Seu JavaScript -->
+    <script src="main.js" defer></script>
 </body>
 
 </html>
